@@ -42,16 +42,6 @@ form.addEventListener("submit", (event) => {
     let foreignCharsValue = foreignChars.value;
 
 
-    /**
-   * Applies the caesar cipher to the input text using the specified shift and modulus.
-   * @param {boolean} [decode="decode"] - Whether to perform decode instead of encode.
-   * @param {string} text - The input text to be encoded or decoded.
-   * @param {number} shift - The shift value to apply to each character in the input text.
-   * @param {number} mod - The modulus value to use for wrapping around the character set.
-   * @param {string} [charset="abcdefghijklmnopqrstuvwxyz0123456789"] - The character set to use for the cipher.
-   * @param {string} [foreignChars=1] - The foreign characters will be remove.
-   * @returns {string} The encode or decode text.
-   */
     function caesarCipher(decode, text, shift, mod, charset, foreignChars) {
         // If decode is equal to decode then reverse the sign of the shift value.
         if (decode == "decode") {
@@ -84,12 +74,6 @@ form.addEventListener("submit", (event) => {
         }
         return result;
     }
-
-    /**
-     * Removes non-letter and non-digit characters from the input string.
-     * @param {string} input - The input string to clean.
-     * @returns {string} The input string with non-letter and non-digit characters removed.
-     */
     function removeForeignChars(input) {
         // Regular expression to match non-letter and non-digit characters
         const regex = /[^a-zA-Z0-9 ]/g;
